@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <div style="padding-left:16px;">
+        <label for="colorSelect">Choose a background color:</label>
+        <select id="colorSelect" [(ngModel)]="selectedColor">
+            <option value="black">Black</option>
+            <option value="yellow">Yellow</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="red">Red</option>
+        </select>
+    </div>
+
+    <div [ngStyle]="{'background-color': selectedColor, 'color': 'white'}" style="padding: 50px; margin-top: 20px;">
+        <h2>The background color is: {{ selectedColor }}</h2>
+        <p>This div's background changes based on the color selected from the dropdown.</p>
+    </div>
+
+</body>
+
+</html>

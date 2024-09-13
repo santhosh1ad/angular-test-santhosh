@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a (click)="onClickHome()">Home</a>
+        <a (click)="onClickService()">Service</a>
+        <a (click)="onClickContact()">Contact</a>
+    </div>
+
+    <div [ngClass]="{'home-bg': isHome, 'service-bg': isService, 'contact-bg': isContact}" style="padding-left:16px">
+        <div *ngIf="isHome">
+            <h2>In Home Page</h2>
+        </div>
+        <div *ngIf="isService">
+            <h2>In Service Page</h2>
+        </div>
+        <div *ngIf="isContact">
+            <h2>In Contact Page</h2>
+        </div>
+    </div>
+
+</body>
+
+</html>
